@@ -1,0 +1,3 @@
+- header
+- section paddings
+- page nav

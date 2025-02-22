@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* Fonts */
+@font-face {
+	font-family: "Satoshi";
+	font-style: normal;
+	font-weight: normal;
+	src:
+		local("Satoshi Regular"),
+		url("../fonts/Satoshi-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Satoshi";
+	font-style: normal;
+	font-weight: 500;
+	src:
+		local("Satoshi Medium"),
+		url("../fonts/Satoshi-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Satoshi";
+	font-style: normal;
+	font-weight: 700;
+	src:
+		local("Satoshi Bold"),
+		url("../fonts/Satoshi-Bold.woff") format("woff");
+}
+
+/* Variables */
+@theme {
+	/* Container */
+	--container-padding: 0 16px;
+	--container-max-width: 1352px;
+	/* Fonts */
+	--font-satoshi: "Satoshi", sans-serif;
+	/* Colors */
+	--color-gray-100: #f7f7f7;
+	--color-gray-500: #333333;
+	--color-green-600: #256a09;
+
+	--color-primary: #fd7256;
+	--color-primary-hovered: #f05f42;
+	--color-title: #264049;
+}
+
+/* Global Styles */
+@layer base {
+	/* Fonts */
+	html,
+	body {
+		@apply font-satoshi bg-gray-100;
+	}
+	p {
+		@apply font-medium text-gray-500;
+	}
+	h2 {
+		@apply text-title text-[40px] leading-normal font-bold capitalize max-md:text-3xl max-sm:text-2xl;
+	}
+	h3 {
+		@apply text-title text-2xl font-bold capitalize;
+	}
+}
+@layer components {
+	.btn {
+		@apply flex w-full max-w-fit items-center justify-center gap-2 rounded-[10px] text-white transition-colors;
+	}
+}
+/* Container max-width & paddings */
+@utility container {
+	@apply mx-auto max-w-[var(--container-max-width)] p-[var(--container-padding)];
+}
+
+@layer utilities {
+	.btn.btn-primary {
+		@apply bg-primary hover:bg-primary-hovered p-4 text-lg font-bold;
+	}
+	.btn.btn-sm {
+		@apply bg-primary hover:bg-primary-hovered;
+	}
+}
