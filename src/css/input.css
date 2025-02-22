@@ -50,10 +50,10 @@
 	/* Fonts */
 	html,
 	body {
-		@apply font-satoshi bg-gray-100;
+		@apply font-satoshi scroll-smooth bg-gray-100;
 	}
 	p {
-		@apply font-medium text-gray-500;
+		@apply font-medium text-gray-500 capitalize;
 	}
 	h2 {
 		@apply text-title text-[40px] leading-normal font-bold capitalize max-md:text-3xl max-sm:text-2xl;

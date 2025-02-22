@@ -112,18 +112,51 @@
 					</div>
 				</section>
 
-				<!-- TODO:NAV -->
-				<section
-					class="bg-primary flex h-[100px] items-center justify-center text-5xl font-bold text-white"
-				>
-					PAGE NAV
+				<!-- NAV -->
+				<section>
+					<div class="container">
+						<ul class="flex flex-wrap gap-10 max-lg:gap-5 max-sm:gap-4">
+							<li class="group active">
+								<a
+									href="#about"
+									class="hover:text-primary group-[.active]:text-primary group-[.active]:bg-primary/10 hover:bg-primary/10 flex max-w-fit items-center justify-center rounded-full bg-white px-[30px] py-2.5 text-xl transition-colors max-sm:px-6 max-sm:py-2"
+								>
+									About
+								</a>
+							</li>
+							<li class="group">
+								<a
+									href="#instructors"
+									class="hover:text-primary group-[.active]:text-primary group-[.active]:bg-primary/10 hover:bg-primary/10 flex max-w-fit items-center justify-center rounded-full bg-white px-[30px] py-2.5 text-xl transition-colors max-sm:px-6 max-sm:py-2"
+								>
+									Instructors
+								</a>
+							</li>
+							<li class="group">
+								<a
+									href="#media"
+									class="hover:text-primary group-[.active]:text-primary group-[.active]:bg-primary/10 hover:bg-primary/10 flex max-w-fit items-center justify-center rounded-full bg-white px-[30px] py-2.5 text-xl transition-colors max-sm:px-6 max-sm:py-2"
+								>
+									Media
+								</a>
+							</li>
+							<li class="group">
+								<a
+									href="#reviews"
+									class="hover:text-primary group-[.active]:text-primary group-[.active]:bg-primary/10 hover:bg-primary/10 flex max-w-fit items-center justify-center rounded-full bg-white px-[30px] py-2.5 text-xl transition-colors max-sm:px-6 max-sm:py-2"
+								>
+									Reviews
+								</a>
+							</li>
+						</ul>
+					</div>
 				</section>
 
 				<!-- About -->
-				<section class="py-5">
+				<section class="mt-8" id="about">
 					<div class="container">
-						<div class="flex">
-							<div class="space-y-5 rounded-[20px] bg-white p-10">
+						<div class="flex gap-5 max-md:flex-col">
+							<div class="space-y-5 rounded-[20px] bg-white p-10 max-md:p-6">
 								<h3>About this Class</h3>
 
 								<p class="text-gray-500/70">
@@ -180,18 +213,236 @@
 									<img src="./images/btn-arrow.svg" alt="brn arrow" />
 								</button>
 							</div>
-							<div class="w-full max-w-[342px]">
+							<div
+								class="w-full max-w-[342px] shrink-0 rounded-[20px] bg-white p-10 max-md:max-w-full max-md:p-6"
+							>
 								<h3>What You’ll Learn</h3>
 
-								<ul>
-									<li>
+								<ul class="mt-8 space-y-6 max-md:mt-6 max-md:space-y-4">
+									<li class="flex items-center gap-[10px]">
 										<img src="./images/check.svg" alt="check icon" />
-										<p>Vestibulum ante ipsum</p>
+										<p class="text-lg">Vestibulum ante ipsum</p>
+									</li>
+									<li class="flex items-center gap-[10px]">
+										<img src="./images/check.svg" alt="check icon" />
+										<p class="text-lg">Maecenas at justo id</p>
+									</li>
+									<li class="flex items-center gap-[10px]">
+										<img src="./images/check.svg" alt="check icon" />
+										<p class="text-lg">Donec posuere vulputate</p>
+									</li>
+									<li class="flex items-center gap-[10px]">
+										<img src="./images/check.svg" alt="check icon" />
+										<p class="text-lg">Aenean tellus metus</p>
+									</li>
+									<li class="flex items-center gap-[10px]">
+										<img src="./images/check.svg" alt="check icon" />
+										<p class="text-lg">Ut varius tincidunt</p>
+									</li>
+									<li class="flex items-center gap-[10px]">
+										<img src="./images/check.svg" alt="check icon" />
+										<p class="text-lg">Duis aute irure</p>
 									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
+				</section>
+
+				<!-- Instructors -->
+				<section class="mt-5" id="instructors">
+					<div class="container">
+						<div class="rounded-[20px] bg-white p-10 max-md:p-6">
+							<h3>Your Instructors</h3>
+							<div
+								class="mt-10 grid grid-cols-2 gap-20 max-lg:grid-cols-1 max-lg:gap-10 max-sm:mt-6"
+							>
+								<div class="flex items-center gap-6 max-sm:flex-col">
+									<div
+										class="w-full max-w-[233px] shrink-0 overflow-hidden rounded-[20px] max-lg:max-w-[200px] max-sm:max-w-full"
+									>
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/instructor-1.png"
+											alt="instructor image"
+										/>
+									</div>
+
+									<div>
+										<p class="text-[22px] font-bold max-sm:text-lg">John Doe</p>
+										<p class="mt-2 text-sm text-gray-500/70">
+											Lorem ipsum dolor sit amet, consectetur adi piscing et
+											dolore magna aliqua.
+										</p>
+
+										<ul class="mt-4 flex items-center gap-3">
+											<li>
+												<a href="#" class="group">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="20"
+														height="20"
+														viewBox="0 0 20 20"
+														fill="none"
+													>
+														<g clip-path="url(#clip0_47_1402)">
+															<path
+																class="group-hover:fill-title transition-colors"
+																d="M15.75 0.9375H18.8175L12.1175 8.615L20 19.0625H13.8287L8.995 12.725L3.46375 19.0625H0.395L7.56125 10.85L0 0.9375H6.32875L10.6975 6.72875L15.75 0.9375ZM14.675 17.2225H16.375L5.40375 2.68125H3.58125L14.675 17.2225Z"
+																fill="#A3A3A3"
+															/>
+														</g>
+														<defs>
+															<clipPath id="clip0_47_1402">
+																<rect width="20" height="20" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="group">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="23"
+														height="24"
+														viewBox="0 0 23 24"
+														fill="none"
+													>
+														<path
+															class="group-hover:fill-title transition-colors"
+															d="M13.4168 13.4375H15.8127L16.771 9.60413H13.4168V7.68746C13.4168 6.70038 13.4168 5.77079 15.3335 5.77079H16.771V2.55079C16.4586 2.50958 15.2789 2.41663 14.033 2.41663C11.4312 2.41663 9.5835 4.00458 9.5835 6.92079V9.60413H6.7085V13.4375H9.5835V21.5833H13.4168V13.4375Z"
+															fill="#A3A3A3"
+														/>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="group">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="22"
+														height="22"
+														viewBox="0 0 22 22"
+														fill="none"
+													>
+														<path
+															class="group-hover:fill-title transition-colors"
+															d="M11.9425 1.83337C12.9738 1.83612 13.4972 1.84162 13.9491 1.85446L14.1269 1.86087C14.3323 1.86821 14.5349 1.87737 14.7796 1.88837C15.7549 1.93421 16.4204 2.08821 17.0044 2.31462C17.6094 2.54746 18.119 2.86279 18.6287 3.37154C19.095 3.82963 19.4557 4.38397 19.6856 4.99587C19.912 5.57979 20.066 6.24529 20.1119 7.22154C20.1229 7.46537 20.132 7.66796 20.1394 7.87421L20.1449 8.05204C20.1586 8.50304 20.1641 9.02646 20.1659 10.0577L20.1669 10.7415V11.9424C20.1691 12.611 20.1621 13.2796 20.1458 13.948L20.1403 14.1259C20.1329 14.3321 20.1238 14.5347 20.1128 14.7785C20.0669 15.7548 19.9111 16.4194 19.6856 17.0042C19.4557 17.6161 19.095 18.1705 18.6287 18.6285C18.1706 19.0948 17.6163 19.4555 17.0044 19.6855C16.4204 19.9119 15.7549 20.0659 14.7796 20.1117L14.1269 20.1392L13.9491 20.1447C13.4972 20.1575 12.9738 20.164 11.9425 20.1658L11.2587 20.1667H10.0588C9.38985 20.1691 8.72093 20.162 8.0522 20.1456L7.87436 20.1401C7.65676 20.1319 7.4392 20.1224 7.2217 20.1117C6.24636 20.0659 5.58086 19.9119 4.99603 19.6855C4.38446 19.4554 3.83044 19.0947 3.37261 18.6285C2.90598 18.1705 2.54496 17.6162 2.31478 17.0042C2.08836 16.4203 1.93436 15.7548 1.88853 14.7785L1.86103 14.1259L1.85645 13.948C1.83955 13.2796 1.83191 12.611 1.83353 11.9424V10.0577C1.83099 9.38909 1.83771 8.72047 1.8537 8.05204L1.86011 7.87421C1.86745 7.66796 1.87661 7.46537 1.88761 7.22154C1.93345 6.24529 2.08745 5.58071 2.31386 4.99587C2.54458 4.38372 2.90623 3.82936 3.37353 3.37154C3.83109 2.90546 4.38478 2.54477 4.99603 2.31462C5.58086 2.08821 6.24545 1.93421 7.2217 1.88837C7.46553 1.87737 7.66903 1.86821 7.87436 1.86087L8.0522 1.85537C8.72062 1.83909 9.38924 1.83206 10.0579 1.83429L11.9425 1.83337ZM11.0002 6.41671C9.78462 6.41671 8.61883 6.89959 7.75929 7.75913C6.89975 8.61868 6.41686 9.78447 6.41686 11C6.41686 12.2156 6.89975 13.3814 7.75929 14.2409C8.61883 15.1005 9.78462 15.5834 11.0002 15.5834C12.2158 15.5834 13.3816 15.1005 14.2411 14.2409C15.1006 13.3814 15.5835 12.2156 15.5835 11C15.5835 9.78447 15.1006 8.61868 14.2411 7.75913C13.3816 6.89959 12.2158 6.41671 11.0002 6.41671ZM11.0002 8.25004C11.3613 8.24998 11.7189 8.32105 12.0526 8.4592C12.3863 8.59734 12.6895 8.79985 12.9449 9.05517C13.2003 9.31049 13.4029 9.61362 13.5411 9.94724C13.6794 10.2809 13.7506 10.6384 13.7507 10.9996C13.7507 11.3607 13.6796 11.7183 13.5415 12.052C13.4034 12.3857 13.2008 12.6889 12.9455 12.9443C12.6902 13.1997 12.3871 13.4023 12.0535 13.5405C11.7198 13.6788 11.3622 13.75 11.0011 13.75C10.2718 13.75 9.57229 13.4603 9.05657 12.9446C8.54084 12.4289 8.25111 11.7294 8.25111 11C8.25111 10.2707 8.54084 9.57122 9.05657 9.0555C9.57229 8.53977 10.2718 8.25004 11.0011 8.25004M15.8136 5.04171C15.5097 5.04171 15.2183 5.16243 15.0034 5.37731C14.7885 5.5922 14.6678 5.88365 14.6678 6.18754C14.6678 6.49143 14.7885 6.78288 15.0034 6.99777C15.2183 7.21265 15.5097 7.33337 15.8136 7.33337C16.1175 7.33337 16.409 7.21265 16.6238 6.99777C16.8387 6.78288 16.9594 6.49143 16.9594 6.18754C16.9594 5.88365 16.8387 5.5922 16.6238 5.37731C16.409 5.16243 16.1175 5.04171 15.8136 5.04171Z"
+															fill="#A3A3A3"
+														/>
+													</svg>
+												</a>
+											</li>
+										</ul>
+
+										<a
+											href="#"
+											class="text-primary hover:text-primary-hovered mt-4 flex max-w-fit font-bold underline underline-offset-4 transition-colors"
+										>
+											Visit Website
+										</a>
+									</div>
+								</div>
+								<div class="flex items-center gap-6 max-sm:flex-col">
+									<div
+										class="w-full max-w-[233px] shrink-0 overflow-hidden rounded-[20px] max-lg:max-w-[200px] max-sm:max-w-full"
+									>
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/instructor-2.png"
+											alt="instructor image"
+										/>
+									</div>
+
+									<div>
+										<p class="text-[22px] font-bold max-sm:text-lg">
+											Kathryn Murphy
+										</p>
+										<p class="mt-2 text-sm text-gray-500/70">
+											Lorem ipsum dolor sit amet, consectetur adi piscing et
+											dolore magna aliqua.
+										</p>
+
+										<ul class="mt-4 flex items-center gap-3">
+											<li>
+												<a href="#" class="group">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="20"
+														height="20"
+														viewBox="0 0 20 20"
+														fill="none"
+													>
+														<g clip-path="url(#clip0_47_1402)">
+															<path
+																class="group-hover:fill-title transition-colors"
+																d="M15.75 0.9375H18.8175L12.1175 8.615L20 19.0625H13.8287L8.995 12.725L3.46375 19.0625H0.395L7.56125 10.85L0 0.9375H6.32875L10.6975 6.72875L15.75 0.9375ZM14.675 17.2225H16.375L5.40375 2.68125H3.58125L14.675 17.2225Z"
+																fill="#A3A3A3"
+															/>
+														</g>
+														<defs>
+															<clipPath id="clip0_47_1402">
+																<rect width="20" height="20" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="group">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="23"
+														height="24"
+														viewBox="0 0 23 24"
+														fill="none"
+													>
+														<path
+															class="group-hover:fill-title transition-colors"
+															d="M13.4168 13.4375H15.8127L16.771 9.60413H13.4168V7.68746C13.4168 6.70038 13.4168 5.77079 15.3335 5.77079H16.771V2.55079C16.4586 2.50958 15.2789 2.41663 14.033 2.41663C11.4312 2.41663 9.5835 4.00458 9.5835 6.92079V9.60413H6.7085V13.4375H9.5835V21.5833H13.4168V13.4375Z"
+															fill="#A3A3A3"
+														/>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="group">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="22"
+														height="22"
+														viewBox="0 0 22 22"
+														fill="none"
+													>
+														<path
+															class="group-hover:fill-title transition-colors"
+															d="M11.9425 1.83337C12.9738 1.83612 13.4972 1.84162 13.9491 1.85446L14.1269 1.86087C14.3323 1.86821 14.5349 1.87737 14.7796 1.88837C15.7549 1.93421 16.4204 2.08821 17.0044 2.31462C17.6094 2.54746 18.119 2.86279 18.6287 3.37154C19.095 3.82963 19.4557 4.38397 19.6856 4.99587C19.912 5.57979 20.066 6.24529 20.1119 7.22154C20.1229 7.46537 20.132 7.66796 20.1394 7.87421L20.1449 8.05204C20.1586 8.50304 20.1641 9.02646 20.1659 10.0577L20.1669 10.7415V11.9424C20.1691 12.611 20.1621 13.2796 20.1458 13.948L20.1403 14.1259C20.1329 14.3321 20.1238 14.5347 20.1128 14.7785C20.0669 15.7548 19.9111 16.4194 19.6856 17.0042C19.4557 17.6161 19.095 18.1705 18.6287 18.6285C18.1706 19.0948 17.6163 19.4555 17.0044 19.6855C16.4204 19.9119 15.7549 20.0659 14.7796 20.1117L14.1269 20.1392L13.9491 20.1447C13.4972 20.1575 12.9738 20.164 11.9425 20.1658L11.2587 20.1667H10.0588C9.38985 20.1691 8.72093 20.162 8.0522 20.1456L7.87436 20.1401C7.65676 20.1319 7.4392 20.1224 7.2217 20.1117C6.24636 20.0659 5.58086 19.9119 4.99603 19.6855C4.38446 19.4554 3.83044 19.0947 3.37261 18.6285C2.90598 18.1705 2.54496 17.6162 2.31478 17.0042C2.08836 16.4203 1.93436 15.7548 1.88853 14.7785L1.86103 14.1259L1.85645 13.948C1.83955 13.2796 1.83191 12.611 1.83353 11.9424V10.0577C1.83099 9.38909 1.83771 8.72047 1.8537 8.05204L1.86011 7.87421C1.86745 7.66796 1.87661 7.46537 1.88761 7.22154C1.93345 6.24529 2.08745 5.58071 2.31386 4.99587C2.54458 4.38372 2.90623 3.82936 3.37353 3.37154C3.83109 2.90546 4.38478 2.54477 4.99603 2.31462C5.58086 2.08821 6.24545 1.93421 7.2217 1.88837C7.46553 1.87737 7.66903 1.86821 7.87436 1.86087L8.0522 1.85537C8.72062 1.83909 9.38924 1.83206 10.0579 1.83429L11.9425 1.83337ZM11.0002 6.41671C9.78462 6.41671 8.61883 6.89959 7.75929 7.75913C6.89975 8.61868 6.41686 9.78447 6.41686 11C6.41686 12.2156 6.89975 13.3814 7.75929 14.2409C8.61883 15.1005 9.78462 15.5834 11.0002 15.5834C12.2158 15.5834 13.3816 15.1005 14.2411 14.2409C15.1006 13.3814 15.5835 12.2156 15.5835 11C15.5835 9.78447 15.1006 8.61868 14.2411 7.75913C13.3816 6.89959 12.2158 6.41671 11.0002 6.41671ZM11.0002 8.25004C11.3613 8.24998 11.7189 8.32105 12.0526 8.4592C12.3863 8.59734 12.6895 8.79985 12.9449 9.05517C13.2003 9.31049 13.4029 9.61362 13.5411 9.94724C13.6794 10.2809 13.7506 10.6384 13.7507 10.9996C13.7507 11.3607 13.6796 11.7183 13.5415 12.052C13.4034 12.3857 13.2008 12.6889 12.9455 12.9443C12.6902 13.1997 12.3871 13.4023 12.0535 13.5405C11.7198 13.6788 11.3622 13.75 11.0011 13.75C10.2718 13.75 9.57229 13.4603 9.05657 12.9446C8.54084 12.4289 8.25111 11.7294 8.25111 11C8.25111 10.2707 8.54084 9.57122 9.05657 9.0555C9.57229 8.53977 10.2718 8.25004 11.0011 8.25004M15.8136 5.04171C15.5097 5.04171 15.2183 5.16243 15.0034 5.37731C14.7885 5.5922 14.6678 5.88365 14.6678 6.18754C14.6678 6.49143 14.7885 6.78288 15.0034 6.99777C15.2183 7.21265 15.5097 7.33337 15.8136 7.33337C16.1175 7.33337 16.409 7.21265 16.6238 6.99777C16.8387 6.78288 16.9594 6.49143 16.9594 6.18754C16.9594 5.88365 16.8387 5.5922 16.6238 5.37731C16.409 5.16243 16.1175 5.04171 15.8136 5.04171Z"
+															fill="#A3A3A3"
+														/>
+													</svg>
+												</a>
+											</li>
+										</ul>
+
+										<a
+											href="#"
+											class="text-primary hover:text-primary-hovered mt-4 flex max-w-fit font-bold underline underline-offset-4 transition-colors"
+										>
+											Visit Website
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- TODO:Sldier -->
+				<section
+					class="bg-primary my-5 flex h-[300px] items-center justify-center text-3xl font-bold text-white"
+				>
+					SLIDER
 				</section>
 			</main>
 

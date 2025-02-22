@@ -1,3 +1,2 @@
 - header
-- section paddings
-- page nav
+- slider
