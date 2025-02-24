@@ -64,7 +64,7 @@
 }
 @layer components {
 	.btn {
-		@apply flex w-full max-w-fit items-center justify-center gap-2 rounded-[10px] text-white transition-colors;
+		@apply flex w-full max-w-fit items-center justify-center gap-2 rounded-[10px] font-bold text-white transition-colors;
 	}
 }
 /* Container max-width & paddings */
@@ -76,8 +76,11 @@
 	.btn.btn-primary {
 		@apply bg-primary hover:bg-primary-hovered p-4 text-lg font-bold;
 	}
+	.btn.btn-outline {
+		@apply hover:bg-primary-hovered text-primary border-primary hover:border-primary-hovered rounded-[10px] border-[1.5px] bg-white hover:text-white;
+	}
 	.btn.btn-sm {
-		@apply bg-primary hover:bg-primary-hovered;
+		@apply px-5 py-2;
 	}
 	.pagination-btn.active {
 		@apply bg-primary border-primary cursor-default text-white;
