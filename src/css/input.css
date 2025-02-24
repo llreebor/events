@@ -86,3 +86,22 @@
 		@apply bg-primary border-primary cursor-default text-white;
 	}
 }
+
+/* Swiper Slider */
+.swiper-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	background: black;
+	opacity: 0.13;
+	transition: 0.3s all;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+	width: 15px;
+	height: 15px;
+	background: var(--color-primary);
+}

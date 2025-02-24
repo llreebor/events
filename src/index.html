@@ -6,6 +6,10 @@
 		<title>Document</title>
 		<link rel="stylesheet" href="./css/output.css" />
 
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -1091,10 +1095,129 @@
 				</section>
 
 				<!-- TODO:Sldier -->
-				<section
-					class="bg-primary my-5 flex h-[300px] items-center justify-center text-3xl font-bold text-white"
-				>
-					SLIDER
+				<section class="overflow-hidden py-5">
+					<div class="container">
+						<h3 class="text-4xl max-md:text-2xl">Events Nearby</h3>
+						<!-- Slider main container -->
+						<div
+							class="swiper swiper-events mt-20 !overflow-visible max-md:mt-10"
+						>
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper overflow-visible pb-14">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<div
+										class="flex items-center gap-6 rounded-2xl bg-white p-[18px] max-sm:flex-col max-sm:items-start"
+									>
+										<div
+											class="w-full max-w-[228px] overflow-hidden rounded-2xl max-sm:max-w-full"
+										>
+											<img
+												class="h-auto w-full max-w-full"
+												src="./images/slide-1.png"
+												alt="slide image"
+											/>
+										</div>
+										<div>
+											<p>Clay Craft Studio</p>
+											<h3 class="mt-2 text-gray-500">
+												Pottery Basics for the Beginners
+											</h3>
+											<p class="mt-2.5 text-black/70 italic">
+												Dec 7, 2024 ── 1:00 PM
+											</p>
+											<a href="#" class="btn btn-sm btn-outline mt-4">
+												Register now
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div
+										class="flex items-center gap-6 rounded-2xl bg-white p-[18px] max-sm:flex-col max-sm:items-start"
+									>
+										<div
+											class="w-full max-w-[228px] overflow-hidden rounded-2xl max-sm:max-w-full"
+										>
+											<img
+												class="h-auto w-full max-w-full"
+												src="./images/slide-2.png"
+												alt="slide image"
+											/>
+										</div>
+										<div>
+											<p>Clay Craft Studio</p>
+											<h3 class="mt-2 text-gray-500">
+												Pottery Basics for the Beginners
+											</h3>
+											<p class="mt-2.5 text-black/70 italic">
+												Dec 7, 2024 ── 1:00 PM
+											</p>
+											<a href="#" class="btn btn-sm btn-outline mt-4">
+												Register now
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div
+										class="flex items-center gap-6 rounded-2xl bg-white p-[18px] max-sm:flex-col max-sm:items-start"
+									>
+										<div
+											class="w-full max-w-[228px] overflow-hidden rounded-2xl max-sm:max-w-full"
+										>
+											<img
+												class="h-auto w-full max-w-full"
+												src="./images/slide-3.png"
+												alt="slide image"
+											/>
+										</div>
+										<div>
+											<p>Clay Craft Studio</p>
+											<h3 class="mt-2 text-gray-500">
+												Pottery Basics for the Beginners
+											</h3>
+											<p class="mt-2.5 text-black/70 italic">
+												Dec 7, 2024 ── 1:00 PM
+											</p>
+											<a href="#" class="btn btn-sm btn-outline mt-4">
+												Register now
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div
+										class="flex items-center gap-6 rounded-2xl bg-white p-[18px] max-sm:flex-col max-sm:items-start"
+									>
+										<div
+											class="w-full max-w-[228px] overflow-hidden rounded-2xl max-sm:max-w-full"
+										>
+											<img
+												class="h-auto w-full max-w-full"
+												src="./images/slide-1.png"
+												alt="slide image"
+											/>
+										</div>
+										<div>
+											<p>Clay Craft Studio</p>
+											<h3 class="mt-2 text-gray-500">
+												Pottery Basics for the Beginners
+											</h3>
+											<p class="mt-2.5 text-black/70 italic">
+												Dec 7, 2024 ── 1:00 PM
+											</p>
+											<a href="#" class="btn btn-sm btn-outline mt-4">
+												Register now
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
 				</section>
 
 				<!-- Classes -->
@@ -1198,6 +1321,7 @@
 		</div>
 
 		<!-- JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>
