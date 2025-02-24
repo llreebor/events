@@ -79,4 +79,7 @@
 	.btn.btn-sm {
 		@apply bg-primary hover:bg-primary-hovered;
 	}
+	.pagination-btn.active {
+		@apply bg-primary border-primary cursor-default text-white;
+	}
 }

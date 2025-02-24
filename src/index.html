@@ -449,8 +449,9 @@
 				<section>
 					<div class="container">
 						<div class="rounded-[20px] bg-white p-10 max-md:p-6">
-							<h3>Reviews</h3>
+							<h3 class="text-4xl max-md:text-2xl">Reviews</h3>
 
+							<!-- Reviews Progress Bars -->
 							<div
 								class="mt-6 flex gap-20 border-y border-black/10 pt-10 pb-20 max-md:flex-col max-md:gap-8 max-md:py-10"
 							>
@@ -589,6 +590,7 @@
 								</div>
 							</div>
 
+							<!-- Filters -->
 							<div class="mt-6 flex items-center gap-5">
 								<select
 									name="sort"
@@ -619,8 +621,470 @@
 								</select>
 							</div>
 
-							<div class="h-full max-h-[1076px]">
-								<div class="space-y-10"></div>
+							<!-- Reviews -->
+							<div class="mt-10 h-full space-y-10 max-md:space-y-6">
+								<!-- Review Item -->
+								<div
+									class="flex items-center gap-10 max-lg:items-start max-lg:gap-6 max-md:flex-col"
+								>
+									<div
+										class="w-full max-w-[380px] rounded-[20px] bg-gray-100 p-10 max-lg:max-w-[300px] max-lg:p-6"
+									>
+										<div class="flex items-center gap-4">
+											<div
+												class="size-16 overflow-hidden rounded-full max-lg:size-12"
+											>
+												<img
+													class="h-auto w-full max-w-full"
+													src="./images/avatar-1.png"
+													alt="avatar"
+												/>
+											</div>
+											<div>
+												<p class="leading-none font-bold">Floyd Miles</p>
+												<p class="text-sm text-gray-500/50">Lorem ipsum</p>
+											</div>
+										</div>
+
+										<div
+											class="mt-6 max-w-[260px] space-y-6 max-[374px]:max-w-full max-lg:space-y-4"
+										>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Overall rating:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Value for Price:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Patron Feedback:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Vendor:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="w-full pr-9 max-md:pr-0">
+										<div class="flex items-start justify-between gap-3">
+											<div>
+												<h3 class="max-sm:text-xl">
+													Exceptional value for the price
+												</h3>
+												<p class="italic">December 19, 2024</p>
+											</div>
+
+											<button
+												class="flex shrink-0 cursor-pointer items-start justify-center"
+											>
+												<img src="./images/info.svg" alt="info icon" />
+											</button>
+										</div>
+
+										<div class="mt-4">
+											<p class="text-gray-500/70">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+												sed do eiusmod tempor incididunt ut labore et dolore
+												magna aliqua. Ut enim ad minim veniam, quis nostrud
+												exercitation ullamco laboris nisi ut aliquip ex ea
+												commodo consequat. Duis aute irure dolor in
+												reprehenderit in voluptate velit esse cillum dolore eu
+												fugiat nulla pariatur. Excepteur sint. occaecat
+												cupidatat non proident.sunt in culpa qui officia ciane
+												deserunt mollit anim id est laborum. Curabitur pretium
+												tincidunt lacus. Nulla gravida orcia odio. Nullam
+												varius.
+											</p>
+										</div>
+
+										<div class="mt-5 flex items-center gap-5">
+											<button
+												class="group flex cursor-pointer items-start justify-center"
+											>
+												<img
+													class="transition-transform group-hover:scale-110"
+													src="./images/like.svg"
+													alt="like"
+												/>
+											</button>
+											<button
+												class="group flex cursor-pointer items-start justify-center"
+											>
+												<img
+													class="transition-transform group-hover:scale-110"
+													src="./images/dislike.svg"
+													alt="dislike"
+												/>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- Review Item -->
+								<div
+									class="flex items-center gap-10 max-lg:items-start max-lg:gap-6 max-md:flex-col"
+								>
+									<div
+										class="w-full max-w-[380px] rounded-[20px] bg-gray-100 p-10 max-lg:max-w-[300px] max-lg:p-6"
+									>
+										<div class="flex items-center gap-4">
+											<div
+												class="size-16 overflow-hidden rounded-full max-lg:size-12"
+											>
+												<img
+													class="h-auto w-full max-w-full"
+													src="./images/avatar-2.png"
+													alt="avatar"
+												/>
+											</div>
+											<div>
+												<p class="leading-none font-bold">Floyd Miles</p>
+												<p class="text-sm text-gray-500/50">Lorem ipsum</p>
+											</div>
+										</div>
+
+										<div
+											class="mt-6 max-w-[260px] space-y-6 max-[374px]:max-w-full max-lg:space-y-4"
+										>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Overall rating:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Value for Price:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Patron Feedback:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Vendor:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="w-full pr-9 max-md:pr-0">
+										<div class="flex items-start justify-between gap-3">
+											<div>
+												<h3 class="max-sm:text-xl">
+													Exceptional value for the price
+												</h3>
+												<p class="italic">December 19, 2024</p>
+											</div>
+
+											<button
+												class="flex shrink-0 cursor-pointer items-start justify-center"
+											>
+												<img src="./images/info.svg" alt="info icon" />
+											</button>
+										</div>
+
+										<div class="mt-4">
+											<p class="text-gray-500/70">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+												sed do eiusmod tempor incididunt ut labore et dolore
+												magna aliqua. Ut enim ad minim veniam, quis nostrud
+												exercitation ullamco laboris nisi ut aliquip ex ea
+												commodo consequat. Duis aute irure dolor in
+												reprehenderit in voluptate velit esse cillum dolore eu
+												fugiat nulla pariatur. Excepteur sint. occaecat
+												cupidatat non proident.sunt in culpa qui officia ciane
+												deserunt mollit anim id est laborum. Curabitur pretium
+												tincidunt lacus. Nulla gravida orcia odio. Nullam
+												varius.
+											</p>
+										</div>
+
+										<div class="mt-5 flex items-center gap-5">
+											<button
+												class="group flex cursor-pointer items-start justify-center"
+											>
+												<img
+													class="transition-transform group-hover:scale-110"
+													src="./images/like.svg"
+													alt="like"
+												/>
+											</button>
+											<button
+												class="group flex cursor-pointer items-start justify-center"
+											>
+												<img
+													class="transition-transform group-hover:scale-110"
+													src="./images/dislike.svg"
+													alt="dislike"
+												/>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- Review Item -->
+								<div
+									class="flex items-center gap-10 max-lg:items-start max-lg:gap-6 max-md:flex-col"
+								>
+									<div
+										class="w-full max-w-[380px] rounded-[20px] bg-gray-100 p-10 max-lg:max-w-[300px] max-lg:p-6"
+									>
+										<div class="flex items-center gap-4">
+											<div
+												class="size-16 overflow-hidden rounded-full max-lg:size-12"
+											>
+												<img
+													class="h-auto w-full max-w-full"
+													src="./images/avatar-3.png"
+													alt="avatar"
+												/>
+											</div>
+											<div>
+												<p class="leading-none font-bold">Floyd Miles</p>
+												<p class="text-sm text-gray-500/50">Lorem ipsum</p>
+											</div>
+										</div>
+
+										<div
+											class="mt-6 max-w-[260px] space-y-6 max-[374px]:max-w-full max-lg:space-y-4"
+										>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Overall rating:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Value for Price:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Patron Feedback:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+											<div
+												class="flex items-center justify-between gap-3 max-[374px]:flex-col max-[374px]:items-start"
+											>
+												<p class="text-sm font-bold">Vendor:</p>
+												<div class="max-w-[114px]">
+													<img
+														class="h-auto w-full max-w-full"
+														src="./images/rating.svg"
+														alt="rating"
+													/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="w-full pr-9 max-md:pr-0">
+										<div class="flex items-start justify-between gap-3">
+											<div>
+												<h3 class="max-sm:text-xl">
+													Exceptional value for the price
+												</h3>
+												<p class="italic">December 19, 2024</p>
+											</div>
+
+											<button
+												class="flex shrink-0 cursor-pointer items-start justify-center"
+											>
+												<img src="./images/info.svg" alt="info icon" />
+											</button>
+										</div>
+
+										<div class="mt-4">
+											<p class="text-gray-500/70">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+												sed do eiusmod tempor incididunt ut labore et dolore
+												magna aliqua. Ut enim ad minim veniam, quis nostrud
+												exercitation ullamco laboris nisi ut aliquip ex ea
+												commodo consequat. Duis aute irure dolor in
+												reprehenderit in voluptate velit esse cillum dolore eu
+												fugiat nulla pariatur. Excepteur sint. occaecat
+												cupidatat non proident.sunt in culpa qui officia ciane
+												deserunt mollit anim id est laborum. Curabitur pretium
+												tincidunt lacus. Nulla gravida orcia odio. Nullam
+												varius.
+											</p>
+										</div>
+
+										<div class="mt-5 flex items-center gap-5">
+											<button
+												class="group flex cursor-pointer items-start justify-center"
+											>
+												<img
+													class="transition-transform group-hover:scale-110"
+													src="./images/like.svg"
+													alt="like"
+												/>
+											</button>
+											<button
+												class="group flex cursor-pointer items-start justify-center"
+											>
+												<img
+													class="transition-transform group-hover:scale-110"
+													src="./images/dislike.svg"
+													alt="dislike"
+												/>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Pagination -->
+							<div class="mt-14 flex justify-center">
+								<div class="flex gap-4 max-sm:gap-3">
+									<button
+										class="group pagination-btn hover:bg-primary hover:border-primary flex size-[50px] cursor-pointer items-center justify-center rounded-[12px] border border-black/10 text-xl font-bold transition-colors max-sm:size-10 max-sm:text-lg"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="9"
+											height="17"
+											viewBox="0 0 9 17"
+											fill="none"
+										>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M0.49936 7.68759C0.287607 7.89941 0.168651 8.18666 0.168651 8.48616C0.168651 8.78567 0.287607 9.07292 0.49936 9.28474L6.88908 15.6745C6.99327 15.7823 7.11791 15.8684 7.25572 15.9276C7.39352 15.9868 7.54174 16.0179 7.69172 16.0192C7.84169 16.0205 7.99043 15.992 8.12924 15.9352C8.26806 15.8784 8.39417 15.7945 8.50022 15.6885C8.60628 15.5824 8.69015 15.4563 8.74694 15.3175C8.80374 15.1787 8.83232 15.0299 8.83101 14.8799C8.82971 14.73 8.79855 14.5818 8.73935 14.4439C8.68015 14.3061 8.59411 14.1815 8.48622 14.0773L2.89508 8.48616L8.48622 2.89502C8.69198 2.68199 8.80583 2.39667 8.80325 2.10051C8.80068 1.80435 8.68189 1.52105 8.47247 1.31163C8.26304 1.10221 7.97974 0.983417 7.68359 0.980844C7.38743 0.97827 7.10211 1.09212 6.88908 1.29787L0.49936 7.68759Z"
+												class="transition-colors group-hover:fill-white group-[.active]:fill-white"
+												fill="black"
+											/>
+										</svg>
+									</button>
+									<button
+										class="group pagination-btn hover:bg-primary hover:border-primary flex size-[50px] cursor-pointer items-center justify-center rounded-[12px] border border-black/10 text-xl font-bold transition-colors max-sm:size-10 max-sm:text-lg"
+									>
+										<p
+											class="transition-colors group-hover:text-white group-[.active]:text-white"
+										>
+											1
+										</p>
+									</button>
+									<button
+										class="group pagination-btn active hover:bg-primary hover:border-primary flex size-[50px] cursor-pointer items-center justify-center rounded-[12px] border border-black/10 text-xl font-bold transition-colors max-sm:size-10 max-sm:text-lg"
+									>
+										<p
+											class="transition-colors group-hover:text-white group-[.active]:text-white"
+										>
+											2
+										</p>
+									</button>
+									<button
+										class="group pagination-btn hover:bg-primary hover:border-primary flex size-[50px] cursor-pointer items-center justify-center rounded-[12px] border border-black/10 text-xl font-bold transition-colors max-sm:size-10 max-sm:text-lg"
+									>
+										<p
+											class="transition-colors group-hover:text-white group-[.active]:text-white"
+										>
+											3
+										</p>
+									</button>
+
+									<button
+										class="group pagination-btn hover:bg-primary hover:border-primary flex size-[50px] cursor-pointer items-center justify-center rounded-[12px] border border-black/10 text-xl font-bold transition-colors max-sm:size-10 max-sm:text-lg"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="10"
+											height="17"
+											viewBox="0 0 10 17"
+											fill="none"
+										>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M9.30044 7.68759C9.5122 7.89941 9.63115 8.18666 9.63115 8.48616C9.63115 8.78567 9.5122 9.07292 9.30044 9.28474L2.91073 15.6745C2.80653 15.7823 2.6819 15.8684 2.54409 15.9276C2.40628 15.9868 2.25807 16.0179 2.10809 16.0192C1.95811 16.0205 1.80938 15.992 1.67056 15.9352C1.53175 15.8784 1.40563 15.7945 1.29958 15.6885C1.19353 15.5824 1.10965 15.4563 1.05286 15.3175C0.996068 15.1787 0.967489 15.0299 0.968793 14.8799C0.970096 14.73 1.00126 14.5818 1.06045 14.4439C1.11965 14.3061 1.2057 14.1815 1.31358 14.0773L6.90472 8.48616L1.31358 2.89502C1.10783 2.68199 0.993979 2.39667 0.996552 2.10051C0.999126 1.80435 1.11792 1.52105 1.32734 1.31163C1.53676 1.10221 1.82006 0.983417 2.11622 0.980844C2.41238 0.97827 2.6977 1.09212 2.91073 1.29787L9.30044 7.68759Z"
+												fill="black"
+												class="transition-colors group-hover:fill-white group-[.active]:fill-white"
+											/>
+										</svg>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
