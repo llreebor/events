@@ -443,10 +443,89 @@
 				</section>
 
 				<!-- TODO:Sldier -->
-				<section
-					class="bg-primary my-5 flex h-[300px] items-center justify-center text-3xl font-bold text-white"
-				>
-					SLIDER
+				<section class="py-10">
+					<div class="container">
+						<div class="rounded-[20px] bg-white p-10 max-md:p-6">
+							<!-- Slider main container -->
+							<div class="swiper swiper-videos">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper pb-14">
+									<!-- Slides -->
+									<div
+										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
+									>
+										<video
+											class="aspect-video"
+											controls
+											src="./images/video/video.mp4"
+										></video>
+									</div>
+									<div
+										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
+									>
+										<video
+											class="aspect-video"
+											controls
+											src="./images/video/video.mp4"
+										></video>
+									</div>
+									<div
+										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
+									>
+										<video
+											class="aspect-video"
+											controls
+											src="./images/video/video.mp4"
+										></video>
+									</div>
+									<div
+										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
+									>
+										<video
+											class="aspect-video"
+											controls
+											src="./images/video/video.mp4"
+										></video>
+									</div>
+									<div
+										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
+									>
+										<video
+											class="aspect-video"
+											controls
+											src="./images/video/video.mp4"
+										></video>
+									</div>
+								</div>
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div
+									class="absolute bottom-[2px] left-1/2 z-10 flex -translate-x-1/2 items-center gap-[130px]"
+								>
+									<div
+										class="swiper-videos-prev relative cursor-pointer transition-transform hover:scale-110"
+									>
+										<img
+											class="pointer-events-none -z-10"
+											src="./images/slider-left.svg"
+											alt="left arrow"
+										/>
+									</div>
+									<div
+										class="swiper-videos-next relative cursor-pointer transition-transform hover:scale-110"
+									>
+										<img
+											class="pointer-events-none -z-10"
+											src="./images/slider-right.svg"
+											alt="right arrow"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
 
 				<!-- Reviews -->
@@ -1094,7 +1173,7 @@
 					</div>
 				</section>
 
-				<!-- TODO:Sldier -->
+				<!-- Events Slider -->
 				<section class="overflow-hidden py-5">
 					<div class="container">
 						<h3 class="text-4xl max-md:text-2xl">Events Nearby</h3>
@@ -1313,11 +1392,6 @@
 					</div>
 				</section>
 			</main>
-
-			<!-- Footer -->
-			<footer class="flex h-40 items-center justify-center bg-slate-300">
-				FOOTER
-			</footer>
 		</div>
 
 		<!-- JS -->

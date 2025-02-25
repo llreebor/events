@@ -13,7 +13,7 @@ function toggleHiddenContent() {
 toggleHiddenContent()
 
 // Events Sldier
-const swiper = new Swiper(".swiper-events", {
+new Swiper(".swiper-events", {
 	spaceBetween: 30,
 	pagination: {
 		el: ".swiper-pagination",
@@ -29,5 +29,47 @@ const swiper = new Swiper(".swiper-events", {
 		992: {
 			slidesPerView: 2.1,
 		},
+	},
+})
+
+// Videos Slider
+new Swiper(".swiper-videos", {
+	// Optional parameters
+	loop: true,
+	spaceBetween: 20,
+	centeredSlides: true,
+	draggable: true,
+	effect: "coverflow",
+
+	// If we need pagination
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+
+	breakpoints: {
+		// when window width is >= 320px
+		320: {
+			slidesPerView: 1,
+		},
+
+		// when window width is >= 640px
+		768: {
+			slidesPerView: 2,
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 10,
+				depth: 2000,
+				modifire: 1,
+				scale: 1.9,
+				slideShadows: false,
+			},
+		},
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: ".swiper-videos-next",
+		prevEl: ".swiper-videos-prev",
 	},
 })

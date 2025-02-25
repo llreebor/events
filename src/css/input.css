@@ -43,6 +43,15 @@
 	--color-primary: #fd7256;
 	--color-primary-hovered: #f05f42;
 	--color-title: #264049;
+
+	/* Backgrouns */
+	--bg-gradient-slider: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0.4) 0%,
+		rgba(255, 255, 255, 0) 18.6%,
+		rgba(255, 255, 255, 0) 80.6%,
+		rgba(255, 255, 255, 0.4) 100%
+	);
 }
 
 /* Global Styles */
@@ -104,4 +113,18 @@
 	width: 15px;
 	height: 15px;
 	background: var(--color-primary);
+}
+.swiper-slide-videos {
+	position: relative;
+	&:after {
+		position: absolute;
+		inset: 0;
+		background: var(--bg-gradient-slider);
+		content: "";
+	}
+}
+.swiper-slide-videos.swiper-slide-active {
+	&:after {
+		opacity: 0;
+	}
 }
