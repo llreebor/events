@@ -455,6 +455,7 @@
 										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
 									>
 										<video
+											loading="lazy"
 											class="aspect-video"
 											controls
 											src="./images/video/video.mp4"
@@ -464,6 +465,7 @@
 										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
 									>
 										<video
+											loading="lazy"
 											class="aspect-video"
 											controls
 											src="./images/video/video.mp4"
@@ -473,6 +475,7 @@
 										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
 									>
 										<video
+											loading="lazy"
 											class="aspect-video"
 											controls
 											src="./images/video/video.mp4"
@@ -482,6 +485,7 @@
 										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
 									>
 										<video
+											loading="lazy"
 											class="aspect-video"
 											controls
 											src="./images/video/video.mp4"
@@ -491,6 +495,7 @@
 										class="swiper-slide swiper-slide-videos overflow-hidden rounded-2xl md:rounded-[42px]"
 									>
 										<video
+											loading="lazy"
 											class="aspect-video"
 											controls
 											src="./images/video/video.mp4"
@@ -502,10 +507,10 @@
 
 								<!-- If we need navigation buttons -->
 								<div
-									class="absolute bottom-[2px] left-1/2 z-10 flex -translate-x-1/2 items-center gap-[130px]"
+									class="absolute bottom-[2px] left-1/2 z-10 hidden -translate-x-1/2 items-center gap-[130px] md:flex"
 								>
 									<div
-										class="swiper-videos-prev relative cursor-pointer transition-transform hover:scale-110"
+										class="swiper-videos-prev relative shrink-0 cursor-pointer transition-transform hover:scale-110"
 									>
 										<img
 											class="pointer-events-none -z-10"
@@ -514,7 +519,7 @@
 										/>
 									</div>
 									<div
-										class="swiper-videos-next relative cursor-pointer transition-transform hover:scale-110"
+										class="swiper-videos-next relative shrink-0 cursor-pointer transition-transform hover:scale-110"
 									>
 										<img
 											class="pointer-events-none -z-10"

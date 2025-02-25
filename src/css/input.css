@@ -116,15 +116,18 @@
 }
 .swiper-slide-videos {
 	position: relative;
+	z-index: 1;
 	&:after {
 		position: absolute;
 		inset: 0;
 		background: var(--bg-gradient-slider);
 		content: "";
+		pointer-events: none;
 	}
 }
 .swiper-slide-videos.swiper-slide-active {
 	&:after {
 		opacity: 0;
+		pointer-events: none;
 	}
 }

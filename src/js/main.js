@@ -38,9 +38,15 @@ new Swiper(".swiper-videos", {
 	loop: true,
 	spaceBetween: 20,
 	centeredSlides: true,
-	draggable: true,
 	effect: "coverflow",
-
+	coverflowEffect: {
+		rotate: 0,
+		stretch: 10,
+		depth: 2000,
+		modifire: 1,
+		scale: 1.9,
+		slideShadows: false,
+	},
 	// If we need pagination
 	pagination: {
 		el: ".swiper-pagination",
@@ -51,19 +57,12 @@ new Swiper(".swiper-videos", {
 		// when window width is >= 320px
 		320: {
 			slidesPerView: 1,
+			draggable: true,
 		},
 
 		// when window width is >= 640px
 		768: {
 			slidesPerView: 2,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 10,
-				depth: 2000,
-				modifire: 1,
-				scale: 1.9,
-				slideShadows: false,
-			},
 		},
 	},
 
