@@ -36,10 +36,12 @@
 	/* Fonts */
 	--font-satoshi: "Satoshi", sans-serif;
 	/* Colors */
+	--color-gray-50: #d2d2d2;
 	--color-gray-100: #f7f7f7;
+	--color-gray-400: #9a9a9a;
 	--color-gray-500: #333333;
+	--color-green-50: rgba(166, 227, 113, 0.2);
 	--color-green-600: #256a09;
-
 	--color-primary: #fd7256;
 	--color-primary-hovered: #f05f42;
 	--color-title: #264049;
@@ -72,18 +74,26 @@
 	}
 }
 @layer components {
+	/* Button */
 	.btn {
-		@apply flex w-full max-w-fit items-center justify-center gap-2 rounded-[10px] font-bold text-white transition-colors;
+		@apply flex w-full max-w-fit cursor-pointer items-center justify-center gap-2 rounded-[10px] font-bold text-white transition-colors;
+	}
+
+	/* Input */
+	.input {
+		@apply focus:outline-primary w-full rounded-[10px] border border-gray-50 px-8 py-4 text-lg placeholder:text-gray-400 placeholder:italic max-lg:px-4 max-lg:py-2 max-lg:text-base;
 	}
 }
 /* Container max-width & paddings */
 @utility container {
-	@apply mx-auto max-w-[var(--container-max-width)] p-[var(--container-padding)];
+	margin: 0 auto;
+	max-width: var(--container-max-width);
+	padding: var(--container-padding);
 }
 
 @layer utilities {
 	.btn.btn-primary {
-		@apply bg-primary hover:bg-primary-hovered p-4 text-lg font-bold;
+		@apply bg-primary hover:bg-primary-hovered flex max-w-fit items-center justify-center gap-2 p-4 text-lg font-bold max-lg:py-2 max-lg:text-base;
 	}
 	.btn.btn-outline {
 		@apply hover:bg-primary-hovered text-primary border-primary hover:border-primary-hovered rounded-[10px] border-[1.5px] bg-white hover:text-white;
