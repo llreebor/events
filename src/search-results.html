@@ -31,9 +31,176 @@
 						<div class="flex min-h-screen gap-9 max-md:flex-col">
 							<!-- Filters -->
 							<div
-								class="flex w-full max-w-[363px] flex-col rounded-[10px] bg-white px-8 py-11 max-lg:max-w-[240px] max-md:max-w-full"
+								class="flex w-full max-w-[363px] flex-col rounded-[10px] bg-white px-8 py-11 max-lg:max-w-[240px] max-lg:px-6 max-lg:py-8 max-md:max-w-full max-md:py-5"
 							>
-								Filters
+								<div class="flex items-center justify-between">
+									<h3 class="text-[22px]">Filters</h3>
+
+									<div class="flex items-center gap-5">
+										<button
+											class="hover:text-primary cursor-pointer font-medium text-red-500 capitalize transition-colors"
+										>
+											clear All
+										</button>
+										<button
+											id="filters-btn"
+											class="bg-primary ml-4 hidden cursor-pointer rounded-sm p-1 max-md:block"
+										>
+											<img
+												id="filters-btn-icon"
+												class="transition-transform"
+												src="./images/fe_arrow-up.svg"
+												alt="arrow"
+											/>
+										</button>
+									</div>
+								</div>
+								<div
+									id="filters-content"
+									class="mt-8 space-y-14 max-lg:space-y-8 max-md:hidden max-md:space-y-5"
+								>
+									<!-- Supports Virtual Event -->
+									<div class="space-y-4">
+										<p class="text-lg font-bold">Supports Virtual Event</p>
+										<label
+											class="relative inline-flex cursor-pointer items-center"
+										>
+											<input
+												type="checkbox"
+												value="value"
+												checked
+												class="peer sr-only outline-none"
+											/>
+											<div
+												class="peer bg-primary/50 peer-checked:bg-primary h-8 w-[56px] rounded-full peer-focus:ring-0 peer-focus:outline-none after:absolute after:top-1 after:left-1 after:h-6 after:w-6 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white peer-checked:after:pl-[4px]"
+											></div>
+										</label>
+									</div>
+
+									<!-- Class Categories -->
+									<div class="space-y-6 max-lg:space-y-4">
+										<p class="text-lg font-bold">Class Categories</p>
+										<div class="flex flex-wrap gap-2">
+											<label class="flex items-center">
+												<input
+													type="checkbox"
+													value="adults"
+													class="peer hidden"
+												/>
+												<span
+													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+												>
+													Adults
+												</span>
+											</label>
+											<label class="flex items-center">
+												<input
+													type="checkbox"
+													value="adults"
+													class="peer hidden"
+												/>
+												<span
+													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+												>
+													Teens
+												</span>
+											</label>
+											<label class="flex items-center">
+												<input
+													type="checkbox"
+													value="adults"
+													class="peer hidden"
+												/>
+												<span
+													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+												>
+													Music
+												</span>
+											</label>
+											<label class="flex items-center">
+												<input
+													type="checkbox"
+													value="adults"
+													class="peer hidden"
+												/>
+												<span
+													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+												>
+													Fitness
+												</span>
+											</label>
+											<label class="flex items-center">
+												<input
+													type="checkbox"
+													value="adults"
+													class="peer hidden"
+												/>
+												<span
+													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+												>
+													Art
+												</span>
+											</label>
+										</div>
+									</div>
+
+									<!-- Class Equipment -->
+									<div class="space-y-6 max-lg:space-y-4">
+										<p class="text-lg font-bold">Class Equipment</p>
+										<div
+											class="grid grid-cols-2 gap-5 max-[374px]:!grid-cols-1 max-lg:grid-cols-1 max-lg:gap-4 max-md:grid-cols-2"
+										>
+											<label class="flex cursor-pointer items-center space-x-2">
+												<input
+													type="checkbox"
+													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+													checked
+												/>
+												<p>Tables</p>
+											</label>
+
+											<label class="flex cursor-pointer items-center space-x-2">
+												<input
+													type="checkbox"
+													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+												/>
+												<p>Chairs</p>
+											</label>
+
+											<label class="flex cursor-pointer items-center space-x-2">
+												<input
+													type="checkbox"
+													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+												/>
+												<p>Speakers</p>
+											</label>
+											<label class="flex cursor-pointer items-center space-x-2">
+												<input
+													type="checkbox"
+													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+													checked
+												/>
+												<p>Projector</p>
+											</label>
+
+											<label class="flex cursor-pointer items-center space-x-2">
+												<input
+													type="checkbox"
+													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+												/>
+												<p>Whiteboard</p>
+											</label>
+
+											<label class="flex cursor-pointer items-center space-x-2">
+												<input
+													type="checkbox"
+													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+												/>
+												<p>Laptops</p>
+											</label>
+										</div>
+									</div>
+								</div>
 							</div>
 
 							<!-- Results -->
@@ -83,12 +250,12 @@
 									</p>
 
 									<div
-										class="flex cursor-pointer overflow-hidden rounded-full border border-gray-500 px-4"
+										class="flex cursor-pointer overflow-hidden rounded-full border border-gray-500 px-4 pr-2"
 									>
 										<select
 											name="filter"
 											id="filter"
-											class="cursor-pointer py-2 outline-none"
+											class="cursor-pointer border-none bg-transparent py-2 outline-none focus:ring-0"
 										>
 											<option value="0" selected hidden>Sort By</option>
 

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin '@tailwindcss/forms';
 
 /* Fonts */
 @font-face {
@@ -45,6 +46,7 @@
 	--color-primary: #fd7256;
 	--color-primary-hovered: #f05f42;
 	--color-title: #264049;
+	--color-red-500: #e41e1e;
 
 	/* Backgrouns */
 	--bg-gradient-slider: linear-gradient(
@@ -93,7 +95,7 @@
 
 @layer utilities {
 	.btn.btn-primary {
-		@apply bg-primary hover:bg-primary-hovered flex max-w-fit items-center justify-center gap-2 p-4 text-lg font-bold max-lg:py-2 max-lg:text-base;
+		@apply bg-primary hover:bg-primary-hovered flex items-center justify-center gap-2 p-4 text-lg font-bold max-lg:py-2 max-lg:text-base;
 	}
 	.btn.btn-outline {
 		@apply hover:bg-primary-hovered text-primary border-primary hover:border-primary-hovered rounded-[10px] border-[1.5px] bg-white hover:text-white;
