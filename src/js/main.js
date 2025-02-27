@@ -69,7 +69,7 @@ new Swiper(".swiper-videos", {
 	breakpoints: {
 		// when window width is >= 320px
 		320: {
-			slidesPerView: 1,
+			slidesPerView: "auto",
 			effect: "none",
 		},
 
