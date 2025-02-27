@@ -70,7 +70,7 @@ new Swiper(".swiper-videos", {
 		// when window width is >= 320px
 		320: {
 			slidesPerView: 1,
-			draggable: true,
+			effect: "none",
 		},
 
 		// when window width is >= 640px
