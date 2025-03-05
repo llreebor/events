@@ -1,588 +1,589 @@
 <!doctype html>
 <html lang="en" class="h-full">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="./css/output.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/output.css" />
 
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body class="relative h-full">
-		<div class="wrapper flex min-h-full flex-col">
-			<!-- TODO:Header -->
-			<header class="bg-primary flex items-center justify-center p-4">
-				<img src="./images/logo.png" alt="logo image" />
-			</header>
-			<!-- Main Content -->
-			<main class="flex-auto">
-				<!-- Filters & Results -->
-				<section class="py-9">
-					<div class="container">
-						<div class="flex min-h-screen gap-9 max-md:flex-col">
-							<!-- Filters -->
-							<div
-								class="flex w-full max-w-[363px] flex-col rounded-[10px] bg-white px-8 py-11 max-lg:max-w-[240px] max-lg:px-6 max-lg:py-8 max-md:max-w-full max-md:py-5"
-							>
-								<div class="flex items-center justify-between">
-									<h3 class="text-[22px]">Filters</h3>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="relative h-full">
+    <div class="wrapper flex min-h-full flex-col">
+      <header class="flex items-center justify-center bg-white p-4 shadow">
+        <a href="#">
+          <img class="max-w-[180px]" src="./images/logo.png" alt="logo image" />
+        </a>
+      </header>
+      <!-- Main Content -->
+      <main class="flex-auto">
+        <!-- Filters & Results -->
+        <section class="py-9">
+          <div class="container">
+            <div class="flex min-h-screen gap-9 max-md:flex-col">
+              <!-- Filters -->
+              <div
+                class="flex w-full max-w-[363px] flex-col rounded-[10px] bg-white px-8 py-11 max-lg:max-w-[240px] max-lg:px-6 max-lg:py-8 max-md:max-w-full max-md:py-5"
+              >
+                <div class="flex items-center justify-between">
+                  <h3 class="text-[22px]">Filters</h3>
 
-									<div class="flex items-center gap-5">
-										<button
-											class="hover:text-primary cursor-pointer font-medium text-red-500 capitalize transition-colors"
-										>
-											clear All
-										</button>
-										<button
-											id="filters-btn"
-											class="bg-primary ml-4 hidden cursor-pointer rounded-sm p-1 max-md:block"
-										>
-											<img
-												id="filters-btn-icon"
-												class="transition-transform"
-												src="./images/fe_arrow-up.svg"
-												alt="arrow"
-											/>
-										</button>
-									</div>
-								</div>
-								<div
-									id="filters-content"
-									class="mt-8 space-y-14 max-lg:space-y-8 max-md:hidden max-md:space-y-5"
-								>
-									<!-- Supports Virtual Event -->
-									<div class="space-y-4">
-										<p class="text-lg font-bold">Supports Virtual Event</p>
-										<label
-											class="relative inline-flex cursor-pointer items-center"
-										>
-											<input
-												type="checkbox"
-												value="value"
-												checked
-												class="peer sr-only outline-none"
-											/>
-											<div
-												class="peer bg-primary/50 peer-checked:bg-primary h-8 w-[56px] rounded-full peer-focus:ring-0 peer-focus:outline-none after:absolute after:top-1 after:left-1 after:h-6 after:w-6 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white peer-checked:after:pl-[4px]"
-											></div>
-										</label>
-									</div>
+                  <div class="flex items-center gap-5">
+                    <button
+                      class="hover:text-primary cursor-pointer font-medium text-red-500 capitalize transition-colors"
+                    >
+                      clear All
+                    </button>
+                    <button
+                      id="filters-btn"
+                      class="bg-primary ml-4 hidden cursor-pointer rounded-sm p-1 max-md:block"
+                    >
+                      <img
+                        id="filters-btn-icon"
+                        class="transition-transform"
+                        src="./images/fe_arrow-up.svg"
+                        alt="arrow"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  id="filters-content"
+                  class="mt-8 space-y-14 max-lg:space-y-8 max-md:hidden max-md:space-y-5"
+                >
+                  <!-- Supports Virtual Event -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-bold">Supports Virtual Event</p>
+                    <label
+                      class="relative inline-flex cursor-pointer items-center"
+                    >
+                      <input
+                        type="checkbox"
+                        value="value"
+                        checked
+                        class="peer sr-only outline-none"
+                      />
+                      <div
+                        class="peer bg-primary/50 peer-checked:bg-primary h-8 w-[56px] rounded-full peer-focus:ring-0 peer-focus:outline-none after:absolute after:top-1 after:left-1 after:h-6 after:w-6 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white peer-checked:after:pl-[4px]"
+                      ></div>
+                    </label>
+                  </div>
 
-									<!-- Class Categories -->
-									<div class="space-y-6 max-lg:space-y-4">
-										<p class="text-lg font-bold">Class Categories</p>
-										<div class="flex flex-wrap gap-2">
-											<label class="flex items-center">
-												<input
-													type="checkbox"
-													value="adults"
-													class="peer hidden"
-												/>
-												<span
-													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
-												>
-													Adults
-												</span>
-											</label>
-											<label class="flex items-center">
-												<input
-													type="checkbox"
-													value="adults"
-													class="peer hidden"
-												/>
-												<span
-													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
-												>
-													Teens
-												</span>
-											</label>
-											<label class="flex items-center">
-												<input
-													type="checkbox"
-													value="adults"
-													class="peer hidden"
-												/>
-												<span
-													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
-												>
-													Music
-												</span>
-											</label>
-											<label class="flex items-center">
-												<input
-													type="checkbox"
-													value="adults"
-													class="peer hidden"
-												/>
-												<span
-													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
-												>
-													Fitness
-												</span>
-											</label>
-											<label class="flex items-center">
-												<input
-													type="checkbox"
-													value="adults"
-													class="peer hidden"
-												/>
-												<span
-													class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
-												>
-													Art
-												</span>
-											</label>
-										</div>
-									</div>
+                  <!-- Class Categories -->
+                  <div class="space-y-6 max-lg:space-y-4">
+                    <p class="text-lg font-bold">Class Categories</p>
+                    <div class="flex flex-wrap gap-2">
+                      <label class="flex items-center">
+                        <input
+                          type="checkbox"
+                          value="adults"
+                          class="peer hidden"
+                        />
+                        <span
+                          class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+                        >
+                          Adults
+                        </span>
+                      </label>
+                      <label class="flex items-center">
+                        <input
+                          type="checkbox"
+                          value="adults"
+                          class="peer hidden"
+                        />
+                        <span
+                          class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+                        >
+                          Teens
+                        </span>
+                      </label>
+                      <label class="flex items-center">
+                        <input
+                          type="checkbox"
+                          value="adults"
+                          class="peer hidden"
+                        />
+                        <span
+                          class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+                        >
+                          Music
+                        </span>
+                      </label>
+                      <label class="flex items-center">
+                        <input
+                          type="checkbox"
+                          value="adults"
+                          class="peer hidden"
+                        />
+                        <span
+                          class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+                        >
+                          Fitness
+                        </span>
+                      </label>
+                      <label class="flex items-center">
+                        <input
+                          type="checkbox"
+                          value="adults"
+                          class="peer hidden"
+                        />
+                        <span
+                          class="peer-checked:bg-primary peer-checked:border-primary cursor-pointer rounded-full border border-black/20 bg-white px-4 py-[6px] text-gray-500 transition-colors duration-200 peer-checked:text-white"
+                        >
+                          Art
+                        </span>
+                      </label>
+                    </div>
+                  </div>
 
-									<!-- Class Equipment -->
-									<div class="space-y-6 max-lg:space-y-4">
-										<p class="text-lg font-bold">Class Equipment</p>
-										<div
-											class="grid grid-cols-2 gap-5 max-[374px]:!grid-cols-1 max-lg:grid-cols-1 max-lg:gap-4 max-md:grid-cols-2"
-										>
-											<label class="flex cursor-pointer items-center space-x-2">
-												<input
-													type="checkbox"
-													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
-													checked
-												/>
-												<p>Tables</p>
-											</label>
+                  <!-- Class Equipment -->
+                  <div class="space-y-6 max-lg:space-y-4">
+                    <p class="text-lg font-bold">Class Equipment</p>
+                    <div
+                      class="grid grid-cols-2 gap-5 max-[374px]:!grid-cols-1 max-lg:grid-cols-1 max-lg:gap-4 max-md:grid-cols-2"
+                    >
+                      <label class="flex cursor-pointer items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+                          checked
+                        />
+                        <p>Tables</p>
+                      </label>
 
-											<label class="flex cursor-pointer items-center space-x-2">
-												<input
-													type="checkbox"
-													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
-												/>
-												<p>Chairs</p>
-											</label>
+                      <label class="flex cursor-pointer items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+                        />
+                        <p>Chairs</p>
+                      </label>
 
-											<label class="flex cursor-pointer items-center space-x-2">
-												<input
-													type="checkbox"
-													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
-												/>
-												<p>Speakers</p>
-											</label>
-											<label class="flex cursor-pointer items-center space-x-2">
-												<input
-													type="checkbox"
-													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
-													checked
-												/>
-												<p>Projector</p>
-											</label>
+                      <label class="flex cursor-pointer items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+                        />
+                        <p>Speakers</p>
+                      </label>
+                      <label class="flex cursor-pointer items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+                          checked
+                        />
+                        <p>Projector</p>
+                      </label>
 
-											<label class="flex cursor-pointer items-center space-x-2">
-												<input
-													type="checkbox"
-													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
-												/>
-												<p>Whiteboard</p>
-											</label>
+                      <label class="flex cursor-pointer items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+                        />
+                        <p>Whiteboard</p>
+                      </label>
 
-											<label class="flex cursor-pointer items-center space-x-2">
-												<input
-													type="checkbox"
-													class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
-												/>
-												<p>Laptops</p>
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
+                      <label class="flex cursor-pointer items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="text-primary h-7 w-7 rounded-[6px] ring-0 outline-none"
+                        />
+                        <p>Laptops</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-							<!-- Results -->
-							<div class="flex w-full flex-col">
-								<!-- Search Form -->
-								<form action="#" class="flex w-full gap-5 max-sm:gap-3">
-									<label for="search-input" class="relative flex w-full">
-										<input
-											class="input pr-14"
-											type="text"
-											id="search-input"
-											placeholder="Search classes"
-										/>
-										<img
-											class="absolute top-1/2 right-5 -translate-y-1/2 max-lg:right-3 max-lg:size-5"
-											src="./images/search-icon.svg"
-											alt="search icon"
-										/>
-									</label>
-									<button
-										class="btn btn-primary max-sm:p-2 max-sm:leading-none"
-									>
-										<span class="max-sm:hidden">Advance search</span>
+              <!-- Results -->
+              <div class="flex w-full flex-col">
+                <!-- Search Form -->
+                <form action="#" class="flex w-full gap-5 max-sm:gap-3">
+                  <label for="search-input" class="relative flex w-full">
+                    <input
+                      class="input pr-14"
+                      type="text"
+                      id="search-input"
+                      placeholder="Search classes"
+                    />
+                    <img
+                      class="absolute top-1/2 right-5 -translate-y-1/2 max-lg:right-3 max-lg:size-5"
+                      src="./images/search-icon.svg"
+                      alt="search icon"
+                    />
+                  </label>
+                  <button
+                    class="btn btn-primary max-sm:p-2 max-sm:leading-none"
+                  >
+                    <span class="max-sm:hidden">Advance search</span>
 
-										<svg
-											class="hidden max-sm:block max-sm:size-5"
-											xmlns="http://www.w3.org/2000/svg"
-											width="29"
-											height="29"
-											viewBox="0 0 29 29"
-											fill="none"
-										>
-											<path
-												d="M18.7292 16.9167H17.7746L17.4363 16.5904C18.6614 15.1695 19.3348 13.3554 19.3333 11.4792C19.3333 9.92576 18.8727 8.40724 18.0097 7.11563C17.1466 5.82402 15.92 4.81733 14.4848 4.22287C13.0497 3.6284 11.4705 3.47286 9.9469 3.77592C8.42334 4.07897 7.02386 4.82701 5.92544 5.92544C4.82701 7.02386 4.07897 8.42334 3.77592 9.9469C3.47286 11.4705 3.6284 13.0497 4.22287 14.4848C4.81733 15.92 5.82402 17.1466 7.11563 18.0097C8.40724 18.8727 9.92576 19.3333 11.4792 19.3333C13.4246 19.3333 15.2129 18.6204 16.5904 17.4363L16.9167 17.7746V18.7292L22.9583 24.7588L24.7588 22.9583L18.7292 16.9167ZM11.4792 16.9167C8.47042 16.9167 6.04167 14.4879 6.04167 11.4792C6.04167 8.47042 8.47042 6.04167 11.4792 6.04167C14.4879 6.04167 16.9167 8.47042 16.9167 11.4792C16.9167 14.4879 14.4879 16.9167 11.4792 16.9167Z"
-												fill="#ffffff"
-											/>
-										</svg>
-									</button>
-								</form>
+                    <svg
+                      class="hidden max-sm:block max-sm:size-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="29"
+                      height="29"
+                      viewBox="0 0 29 29"
+                      fill="none"
+                    >
+                      <path
+                        d="M18.7292 16.9167H17.7746L17.4363 16.5904C18.6614 15.1695 19.3348 13.3554 19.3333 11.4792C19.3333 9.92576 18.8727 8.40724 18.0097 7.11563C17.1466 5.82402 15.92 4.81733 14.4848 4.22287C13.0497 3.6284 11.4705 3.47286 9.9469 3.77592C8.42334 4.07897 7.02386 4.82701 5.92544 5.92544C4.82701 7.02386 4.07897 8.42334 3.77592 9.9469C3.47286 11.4705 3.6284 13.0497 4.22287 14.4848C4.81733 15.92 5.82402 17.1466 7.11563 18.0097C8.40724 18.8727 9.92576 19.3333 11.4792 19.3333C13.4246 19.3333 15.2129 18.6204 16.5904 17.4363L16.9167 17.7746V18.7292L22.9583 24.7588L24.7588 22.9583L18.7292 16.9167ZM11.4792 16.9167C8.47042 16.9167 6.04167 14.4879 6.04167 11.4792C6.04167 8.47042 8.47042 6.04167 11.4792 6.04167C14.4879 6.04167 16.9167 8.47042 16.9167 11.4792C16.9167 14.4879 14.4879 16.9167 11.4792 16.9167Z"
+                        fill="#ffffff"
+                      />
+                    </svg>
+                  </button>
+                </form>
 
-								<!-- Results Head -->
-								<div class="mt-10 flex items-center justify-between gap-5">
-									<p class="text-lg font-bold">
-										Results (
-										<span>24</span>
-										)
-									</p>
+                <!-- Results Head -->
+                <div class="mt-10 flex items-center justify-between gap-5">
+                  <p class="text-lg font-bold">
+                    Results (
+                    <span>24</span>
+                    )
+                  </p>
 
-									<div
-										class="flex cursor-pointer overflow-hidden rounded-full border border-gray-500 px-4 pr-2"
-									>
-										<select
-											name="filter"
-											id="filter"
-											class="cursor-pointer border-none bg-transparent py-2 outline-none focus:ring-0"
-										>
-											<option value="0" selected hidden>Sort By</option>
+                  <div
+                    class="flex cursor-pointer overflow-hidden rounded-full border border-gray-500 px-4 pr-2"
+                  >
+                    <select
+                      name="filter"
+                      id="filter"
+                      class="cursor-pointer border-none bg-transparent py-2 outline-none focus:ring-0"
+                    >
+                      <option value="0" selected hidden>Sort By</option>
 
-											<option value="1">Option 1</option>
-											<option value="2">Option 2</option>
-											<option value="3">Option 3</option>
-											<option value="4">Option 4</option>
-										</select>
-									</div>
-								</div>
-								<!-- Results Items -->
-								<div class="mt-10 space-y-8">
-									<!-- Result Item -->
-									<div class="rounded-[20px] bg-white p-8 max-lg:p-5">
-										<!-- Result Item Header -->
-										<div
-											class="flex items-center gap-6 max-lg:items-start max-sm:flex-col"
-										>
-											<!-- Result Item Image -->
-											<div
-												class="w-full max-w-[150px] overflow-hidden rounded-[20px] max-sm:max-w-full"
-											>
-												<img
-													class="h-auto w-full max-w-full"
-													src="./images/hero-1.png"
-													alt="result image"
-												/>
-											</div>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                      <option value="4">Option 4</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Results Items -->
+                <div class="mt-10 space-y-8">
+                  <!-- Result Item -->
+                  <div class="rounded-[20px] bg-white p-8 max-lg:p-5">
+                    <!-- Result Item Header -->
+                    <div
+                      class="flex items-center gap-6 max-lg:items-start max-sm:flex-col"
+                    >
+                      <!-- Result Item Image -->
+                      <div
+                        class="w-full max-w-[150px] overflow-hidden rounded-[20px] max-sm:max-w-full"
+                      >
+                        <img
+                          class="h-auto w-full max-w-full"
+                          src="./images/hero-1.png"
+                          alt="result image"
+                        />
+                      </div>
 
-											<!-- Result Item Header Content -->
-											<div>
-												<div
-													class="flex items-center justify-between gap-2 max-sm:flex-col-reverse max-sm:items-start"
-												>
-													<h3 class="text-[22px]">
-														Jester Johns Cooking Class
-													</h3>
-													<div
-														class="flex shrink-0 items-center justify-center rounded-full bg-green-50 px-5 py-2.5"
-													>
-														<p class="font-bold text-green-600">$200 - $250</p>
-													</div>
-												</div>
-												<div
-													class="flex items-center gap-3 max-[360px]:flex-col max-[360px]:items-start max-sm:mt-2"
-												>
-													<img
-														class="w-[140px]"
-														src="./images/rating.svg"
-														alt="rating image"
-													/>
-													<p>
-														4.4
-														<span class="text-gray-500/60">(1.3k reviews)</span>
-													</p>
-												</div>
-												<p class="mt-3 pr-8 text-gray-500/70">
-													Lorem ipsum dolor sit amet, consectetur adipiscing
-													elit, sed do eiusmod tempor incididunt ut labore et
-													dolore magna aliqua.
-												</p>
-											</div>
-										</div>
+                      <!-- Result Item Header Content -->
+                      <div>
+                        <div
+                          class="flex items-center justify-between gap-2 max-sm:flex-col-reverse max-sm:items-start"
+                        >
+                          <h3 class="text-[22px]">
+                            Jester Johns Cooking Class
+                          </h3>
+                          <div
+                            class="flex shrink-0 items-center justify-center rounded-full bg-green-50 px-5 py-2.5"
+                          >
+                            <p class="font-bold text-green-600">$200 - $250</p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center gap-3 max-[360px]:flex-col max-[360px]:items-start max-sm:mt-2"
+                        >
+                          <img
+                            class="w-[140px]"
+                            src="./images/rating.svg"
+                            alt="rating image"
+                          />
+                          <p>
+                            4.4
+                            <span class="text-gray-500/60">(1.3k reviews)</span>
+                          </p>
+                        </div>
+                        <p class="mt-3 pr-8 text-gray-500/70">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </p>
+                      </div>
+                    </div>
 
-										<!-- CheckList -->
-										<ul
-											class="mt-9 flex flex-wrap items-center gap-x-10 gap-y-3"
-										>
-											<li class="flex items-center gap-3">
-												<img src="./images/green-check.svg" alt="check icon" />
-												<p>Virtual Event</p>
-											</li>
-											<li class="flex items-center gap-3">
-												<img src="./images/green-check.svg" alt="check icon" />
-												<p>Supplies provided</p>
-											</li>
-											<li class="flex items-center gap-3">
-												<img src="./images/green-check.svg" alt="check icon" />
-												<p>Tablets</p>
-											</li>
-										</ul>
+                    <!-- CheckList -->
+                    <ul
+                      class="mt-9 flex flex-wrap items-center gap-x-10 gap-y-3"
+                    >
+                      <li class="flex items-center gap-3">
+                        <img src="./images/green-check.svg" alt="check icon" />
+                        <p>Virtual Event</p>
+                      </li>
+                      <li class="flex items-center gap-3">
+                        <img src="./images/green-check.svg" alt="check icon" />
+                        <p>Supplies provided</p>
+                      </li>
+                      <li class="flex items-center gap-3">
+                        <img src="./images/green-check.svg" alt="check icon" />
+                        <p>Tablets</p>
+                      </li>
+                    </ul>
 
-										<!-- Tags -->
-										<ul class="mt-6 flex flex-wrap gap-2">
-											<li>
-												<p
-													class="rounded-full bg-black/5 px-[14px] py-[5px] text-sm"
-												>
-													All Ages
-												</p>
-											</li>
-											<li>
-												<p
-													class="rounded-full bg-black/5 px-[14px] py-[5px] text-sm"
-												>
-													Cooking
-												</p>
-											</li>
-										</ul>
-										<!-- Teachers -->
-										<div class="mt-6">
-											<p class="text-lg">teachers:</p>
+                    <!-- Tags -->
+                    <ul class="mt-6 flex flex-wrap gap-2">
+                      <li>
+                        <p
+                          class="rounded-full bg-black/5 px-[14px] py-[5px] text-sm"
+                        >
+                          All Ages
+                        </p>
+                      </li>
+                      <li>
+                        <p
+                          class="rounded-full bg-black/5 px-[14px] py-[5px] text-sm"
+                        >
+                          Cooking
+                        </p>
+                      </li>
+                    </ul>
+                    <!-- Teachers -->
+                    <div class="mt-6">
+                      <p class="text-lg">teachers:</p>
 
-											<div
-												class="mt-5 flex items-center gap-5 max-[1200px]:flex-col max-[1200px]:items-start"
-											>
-												<div class="flex flex-wrap gap-20 max-[1200px]:gap-5">
-													<div class="flex items-center gap-4">
-														<div
-															class="size-16 shrink-0 overflow-hidden rounded-full max-sm:size-12"
-														>
-															<img src="./images/avatar-4.png" alt="avatar" />
-														</div>
+                      <div
+                        class="mt-5 flex items-center gap-5 max-[1200px]:flex-col max-[1200px]:items-start"
+                      >
+                        <div class="flex flex-wrap gap-20 max-[1200px]:gap-5">
+                          <div class="flex items-center gap-4">
+                            <div
+                              class="size-16 shrink-0 overflow-hidden rounded-full max-sm:size-12"
+                            >
+                              <img src="./images/avatar-4.png" alt="avatar" />
+                            </div>
 
-														<div>
-															<p class="font-bold">John Doe</p>
-															<p class="text-sm text-gray-500/50">
-																Lorem ipsum dolor
-															</p>
-														</div>
-													</div>
+                            <div>
+                              <p class="font-bold">John Doe</p>
+                              <p class="text-sm text-gray-500/50">
+                                Lorem ipsum dolor
+                              </p>
+                            </div>
+                          </div>
 
-													<div class="flex items-center gap-4">
-														<div
-															class="size-16 shrink-0 overflow-hidden rounded-full max-sm:size-12"
-														>
-															<img src="./images/avatar-5.png" alt="avatar" />
-														</div>
+                          <div class="flex items-center gap-4">
+                            <div
+                              class="size-16 shrink-0 overflow-hidden rounded-full max-sm:size-12"
+                            >
+                              <img src="./images/avatar-5.png" alt="avatar" />
+                            </div>
 
-														<div>
-															<p class="font-bold">Kathryn Murphy</p>
-															<p class="text-sm text-gray-500/50">
-																Lorem ipsum dolor
-															</p>
-														</div>
-													</div>
-												</div>
+                            <div>
+                              <p class="font-bold">Kathryn Murphy</p>
+                              <p class="text-sm text-gray-500/50">
+                                Lorem ipsum dolor
+                              </p>
+                            </div>
+                          </div>
+                        </div>
 
-												<div class="ml-auto max-[1200px]:ml-0">
-													<a
-														href="#"
-														class="btn btn-primary !px-4 !py-3 text-base"
-													>
-														Visit Website
-														<svg
-															xmlns="http://www.w3.org/2000/svg"
-															width="24"
-															height="24"
-															viewBox="0 0 24 24"
-															fill="none"
-														>
-															<path
-																d="M6.34299 17.6569L17.6567 6.34317M17.6567 6.34317V14.8284M17.6567 6.34317H9.17142"
-																stroke="white"
-																stroke-width="2"
-																stroke-linecap="round"
-																stroke-linejoin="round"
-															/>
-														</svg>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
+                        <div class="ml-auto max-[1200px]:ml-0">
+                          <a
+                            href="#"
+                            class="btn btn-primary !px-4 !py-3 text-base"
+                          >
+                            Visit Website
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M6.34299 17.6569L17.6567 6.34317M17.6567 6.34317V14.8284M17.6567 6.34317H9.17142"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-									<!-- Result Item -->
-									<div class="rounded-[20px] bg-white p-8 max-lg:p-5">
-										<!-- Result Item Header -->
-										<div
-											class="flex items-center gap-6 max-lg:items-start max-sm:flex-col"
-										>
-											<!-- Result Item Image -->
-											<div
-												class="w-full max-w-[150px] overflow-hidden rounded-[20px] max-sm:max-w-full"
-											>
-												<img
-													class="h-auto w-full max-w-full"
-													src="./images/hero-1.png"
-													alt="result image"
-												/>
-											</div>
+                  <!-- Result Item -->
+                  <div class="rounded-[20px] bg-white p-8 max-lg:p-5">
+                    <!-- Result Item Header -->
+                    <div
+                      class="flex items-center gap-6 max-lg:items-start max-sm:flex-col"
+                    >
+                      <!-- Result Item Image -->
+                      <div
+                        class="w-full max-w-[150px] overflow-hidden rounded-[20px] max-sm:max-w-full"
+                      >
+                        <img
+                          class="h-auto w-full max-w-full"
+                          src="./images/hero-1.png"
+                          alt="result image"
+                        />
+                      </div>
 
-											<!-- Result Item Header Content -->
-											<div>
-												<div
-													class="flex items-center justify-between gap-2 max-sm:flex-col-reverse max-sm:items-start"
-												>
-													<h3 class="text-[22px]">
-														Jester Johns Cooking Class
-													</h3>
-													<div
-														class="flex shrink-0 items-center justify-center rounded-full bg-green-50 px-5 py-2.5"
-													>
-														<p class="font-bold text-green-600">$200 - $250</p>
-													</div>
-												</div>
-												<div
-													class="flex items-center gap-3 max-[360px]:flex-col max-[360px]:items-start max-sm:mt-2"
-												>
-													<img
-														class="w-[140px]"
-														src="./images/rating.svg"
-														alt="rating image"
-													/>
-													<p>
-														4.4
-														<span class="text-gray-500/60">(1.3k reviews)</span>
-													</p>
-												</div>
-												<p class="mt-3 pr-8 text-gray-500/70">
-													Lorem ipsum dolor sit amet, consectetur adipiscing
-													elit, sed do eiusmod tempor incididunt ut labore et
-													dolore magna aliqua.
-												</p>
-											</div>
-										</div>
+                      <!-- Result Item Header Content -->
+                      <div>
+                        <div
+                          class="flex items-center justify-between gap-2 max-sm:flex-col-reverse max-sm:items-start"
+                        >
+                          <h3 class="text-[22px]">
+                            Jester Johns Cooking Class
+                          </h3>
+                          <div
+                            class="flex shrink-0 items-center justify-center rounded-full bg-green-50 px-5 py-2.5"
+                          >
+                            <p class="font-bold text-green-600">$200 - $250</p>
+                          </div>
+                        </div>
+                        <div
+                          class="flex items-center gap-3 max-[360px]:flex-col max-[360px]:items-start max-sm:mt-2"
+                        >
+                          <img
+                            class="w-[140px]"
+                            src="./images/rating.svg"
+                            alt="rating image"
+                          />
+                          <p>
+                            4.4
+                            <span class="text-gray-500/60">(1.3k reviews)</span>
+                          </p>
+                        </div>
+                        <p class="mt-3 pr-8 text-gray-500/70">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </p>
+                      </div>
+                    </div>
 
-										<!-- CheckList -->
-										<ul
-											class="mt-9 flex flex-wrap items-center gap-x-10 gap-y-3"
-										>
-											<li class="flex items-center gap-3">
-												<img src="./images/green-check.svg" alt="check icon" />
-												<p>Virtual Event</p>
-											</li>
-											<li class="flex items-center gap-3">
-												<img src="./images/green-check.svg" alt="check icon" />
-												<p>Supplies provided</p>
-											</li>
-											<li class="flex items-center gap-3">
-												<img src="./images/green-check.svg" alt="check icon" />
-												<p>Tablets</p>
-											</li>
-										</ul>
+                    <!-- CheckList -->
+                    <ul
+                      class="mt-9 flex flex-wrap items-center gap-x-10 gap-y-3"
+                    >
+                      <li class="flex items-center gap-3">
+                        <img src="./images/green-check.svg" alt="check icon" />
+                        <p>Virtual Event</p>
+                      </li>
+                      <li class="flex items-center gap-3">
+                        <img src="./images/green-check.svg" alt="check icon" />
+                        <p>Supplies provided</p>
+                      </li>
+                      <li class="flex items-center gap-3">
+                        <img src="./images/green-check.svg" alt="check icon" />
+                        <p>Tablets</p>
+                      </li>
+                    </ul>
 
-										<!-- Tags -->
-										<ul class="mt-6 flex flex-wrap gap-2">
-											<li>
-												<p
-													class="rounded-full bg-black/5 px-[14px] py-[5px] text-sm"
-												>
-													All Ages
-												</p>
-											</li>
-											<li>
-												<p
-													class="rounded-full bg-black/5 px-[14px] py-[5px] text-sm"
-												>
-													Cooking
-												</p>
-											</li>
-										</ul>
-										<!-- Teachers -->
-										<div class="mt-6">
-											<p class="text-lg">teachers:</p>
+                    <!-- Tags -->
+                    <ul class="mt-6 flex flex-wrap gap-2">
+                      <li>
+                        <p
+                          class="rounded-full bg-black/5 px-[14px] py-[5px] text-sm"
+                        >
+                          All Ages
+                        </p>
+                      </li>
+                      <li>
+                        <p
+                          class="rounded-full bg-black/5 px-[14px] py-[5px] text-sm"
+                        >
+                          Cooking
+                        </p>
+                      </li>
+                    </ul>
+                    <!-- Teachers -->
+                    <div class="mt-6">
+                      <p class="text-lg">teachers:</p>
 
-											<div
-												class="mt-5 flex items-center gap-5 max-[1200px]:flex-col max-[1200px]:items-start"
-											>
-												<div class="flex flex-wrap gap-20 max-[1200px]:gap-5">
-													<div class="flex items-center gap-4">
-														<div
-															class="size-16 shrink-0 overflow-hidden rounded-full max-sm:size-12"
-														>
-															<img src="./images/avatar-4.png" alt="avatar" />
-														</div>
+                      <div
+                        class="mt-5 flex items-center gap-5 max-[1200px]:flex-col max-[1200px]:items-start"
+                      >
+                        <div class="flex flex-wrap gap-20 max-[1200px]:gap-5">
+                          <div class="flex items-center gap-4">
+                            <div
+                              class="size-16 shrink-0 overflow-hidden rounded-full max-sm:size-12"
+                            >
+                              <img src="./images/avatar-4.png" alt="avatar" />
+                            </div>
 
-														<div>
-															<p class="font-bold">John Doe</p>
-															<p class="text-sm text-gray-500/50">
-																Lorem ipsum dolor
-															</p>
-														</div>
-													</div>
+                            <div>
+                              <p class="font-bold">John Doe</p>
+                              <p class="text-sm text-gray-500/50">
+                                Lorem ipsum dolor
+                              </p>
+                            </div>
+                          </div>
 
-													<div class="flex items-center gap-4">
-														<div
-															class="size-16 shrink-0 overflow-hidden rounded-full max-sm:size-12"
-														>
-															<img src="./images/avatar-5.png" alt="avatar" />
-														</div>
+                          <div class="flex items-center gap-4">
+                            <div
+                              class="size-16 shrink-0 overflow-hidden rounded-full max-sm:size-12"
+                            >
+                              <img src="./images/avatar-5.png" alt="avatar" />
+                            </div>
 
-														<div>
-															<p class="font-bold">Kathryn Murphy</p>
-															<p class="text-sm text-gray-500/50">
-																Lorem ipsum dolor
-															</p>
-														</div>
-													</div>
-												</div>
+                            <div>
+                              <p class="font-bold">Kathryn Murphy</p>
+                              <p class="text-sm text-gray-500/50">
+                                Lorem ipsum dolor
+                              </p>
+                            </div>
+                          </div>
+                        </div>
 
-												<div class="ml-auto max-[1200px]:ml-0">
-													<a
-														href="#"
-														class="btn btn-primary !px-4 !py-3 text-base"
-													>
-														Visit Website
-														<svg
-															xmlns="http://www.w3.org/2000/svg"
-															width="24"
-															height="24"
-															viewBox="0 0 24 24"
-															fill="none"
-														>
-															<path
-																d="M6.34299 17.6569L17.6567 6.34317M17.6567 6.34317V14.8284M17.6567 6.34317H9.17142"
-																stroke="white"
-																stroke-width="2"
-																stroke-linecap="round"
-																stroke-linejoin="round"
-															/>
-														</svg>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-		</div>
+                        <div class="ml-auto max-[1200px]:ml-0">
+                          <a
+                            href="#"
+                            class="btn btn-primary !px-4 !py-3 text-base"
+                          >
+                            Visit Website
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M6.34299 17.6569L17.6567 6.34317M17.6567 6.34317V14.8284M17.6567 6.34317H9.17142"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
 
-		<!-- JS -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script src="./js/main.js"></script>
-	</body>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
